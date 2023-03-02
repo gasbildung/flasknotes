@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Notes</title>
+  </head>
+  <body>
+    <H1>Notes:</H1>
+    <form action="/clear" method="DELETE">
+    <input type="submit" value="Clear">
+    </form>
+    <table>
+    {% for line in template_text %}
+    <tr>
+      <td>{{line}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    <form action="/message" method="POST">
+    <input type="text" id="name" name="text">
+    <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
